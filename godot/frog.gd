@@ -10,7 +10,7 @@ func _ready():
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	if chase == true:
-		if get_node("AnimatedSprite2D").animation != "jump":
+		if get_node("AnimatedSprite2D").animation != "death":
 			get_node("AnimatedSprite2D").play("jump")
 		player = get_node("../../player/player")
 		var direction = (player.position - self.position).normalized()
