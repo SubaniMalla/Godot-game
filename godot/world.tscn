@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7boe0pgfbdet"]
+[gd_scene load_steps=8 format=3 uid="uid://b7boe0pgfbdet"]
 
 [ext_resource type="PackedScene" uid="uid://c2c1bfs2lm1m" path="res://player/player.tscn" id="1_1h4q8"]
 [ext_resource type="Script" path="res://player/bg.gd" id="1_6ww67"]
 [ext_resource type="Texture2D" uid="uid://dan2xopcwji0k" path="res://Sunny-land-files/Sunny-land-files/Graphical Assets/environment/tileset.png" id="1_sqwcv"]
 [ext_resource type="Texture2D" uid="uid://bwx0ydv21m4bo" path="res://Sunny-land-files/Sunny-land-files/Graphical Assets/environment/Background/back.png" id="2_h5qll"]
+[ext_resource type="PackedScene" uid="uid://bfpfstg66ksfk" path="res://frog.tscn" id="5_rv5l8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdyxh"]
 texture = ExtResource("1_sqwcv")
@@ -429,5 +430,12 @@ position = Vector2(598.5, 361)
 scale = Vector2(3.13802, 3)
 texture = ExtResource("2_h5qll")
 
-[node name="player" parent="." instance=ExtResource("1_1h4q8")]
-position = Vector2(49, 416)
+[node name="player" type="Node2D" parent="."]
+
+[node name="player" parent="player" instance=ExtResource("1_1h4q8")]
+position = Vector2(23, 200)
+
+[node name="mobs" type="Node2D" parent="."]
+
+[node name="frog" parent="mobs" instance=ExtResource("5_rv5l8")]
+position = Vector2(534, 213)
